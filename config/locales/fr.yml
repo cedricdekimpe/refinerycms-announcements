@@ -1,0 +1,29 @@
+fr:
+  shared:
+    admin:
+      image_picker:
+        image: image
+  plugins:
+    announcements:
+      title: Annonces
+  admin:
+    announcements:
+      actions:
+        create_new: Créer une nouvelle annonce
+        reorder: Réordonner les annonces
+        reorder_done: Fin de réordonnancement des annonces
+      records:
+        title: Annonces
+        sorry_no_results: "Désolé ! Aucun résultat."
+        no_items_yet: 'Il n''y a actuellement aucune Annonce. Cliquer sur "Créer une nouvelle annonce" pour créer votre première annonce.'
+      announcement:
+        view_live_html: Voir cette annonce <br/><em>(Ouvre une nouvelle fenêtre)</em>
+        edit: Modifier cette annonce
+        delete: Supprimer définitivement cette annonce
+        from_to: "Du %{from} au %{to}"
+  announcements:
+    show:
+      other: Autres annonces
+    titles:
+      other: Autres annonces
+    nodata: "Aucune annonce n'est disponible actuellement"

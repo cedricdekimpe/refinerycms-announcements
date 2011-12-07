@@ -1,0 +1,30 @@
+<% content_for :body_content_title do %>
+  <%= @announcement.title %>
+<% end %>
+
+<% content_for :body_content_left do %>
+
+  <section>
+    <%= image_fu @announcement.photo, nil %>
+    <p>
+      <%=raw @announcement.description %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :body_content_right do %>
+    <% if @announcements.size > 0 -%>
+      <aside>
+        <h2><%= t('.other') %></h2>
+        <ul id="announcements">
+          <% @announcements.each do |announcement| %>
+            <li>
+              <%= link_to announcement.title, announcement_path(announcement) %>
+            </li>
+          <% end %>
+        </ul>
+      </aside>
+    <% end %>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>

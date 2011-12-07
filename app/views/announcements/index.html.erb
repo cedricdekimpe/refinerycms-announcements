@@ -1,0 +1,17 @@
+
+<% content_for :body_content_right do %>
+  <h3><%= t("announcements.titles.other") %></h3>
+  <% if @announcements.size > 0 -%>
+      <ul id="announcements">
+        <% @announcements.each do |announcement| %>
+          <li>
+            <%= link_to announcement.title, announcement_path(announcement) %>
+          </li>
+        <% end %>
+      </ul>
+  <% else %>
+        <p class="no-data"><%= t("announcements.nodata") %></p>
+  <% end %>
+<% end %>
+
+<%= render :partial => "/shared/content_page" %>
