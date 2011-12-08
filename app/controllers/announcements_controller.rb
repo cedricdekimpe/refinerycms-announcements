@@ -17,6 +17,15 @@ class AnnouncementsController < ApplicationController
     present(@page)
   end
 
+  def sitemap
+    headers['Content-Type'] = 'application/xml'
+    @announcements = Announcement.displayable.all
+    logger.info @announcements.inspect
+    respond_to do |format|
+      format.xml {}
+    end
+  end
+
 protected
 
   def find_all_announcements
