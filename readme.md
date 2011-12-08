@@ -29,6 +29,11 @@ Thant's it! You can now log into your Refinery CMS administration panel and star
 * Create a file named `app/views/announcements/index.html.erb` to override index.html.erb
 * Create a file named `app/views/announcements/show.html.erb` to override show.html.erb
 
+## How-to access your announcements sitemap
+
+Point your browser to
+    http://wwww.mysite.com/announcements/sitemap.xml
+
 ## Support
 
 If you have any trouble using this engine, please let me know by e-mail at : cedric[AT]studio-sept[DOT]be
